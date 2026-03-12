@@ -26,16 +26,5 @@ A signal is flagged as an anomaly if $Z > 3.0$, representing a deviation outside
 The system generates a persistent audit trail. Every 30 seconds, the Detection Engine outputs a Tactical Summary, aggregating total detected anomalies and current environmental stability (Standard Deviation).
 
 ### Sample Execution Output:
-<details>
-<summary>Click to view raw system logs</summary>
-```text
-aegis_brain  | [INFO] --- TACTICAL SUMMARY ---
-aegis_brain  | [INFO] Report Window: 30s
-aegis_brain  | [INFO] Total Anomalies Detected: 13
-aegis_brain  | [INFO] Environmental Stability (StdDev): 7.1010
-aegis_sensor | Signal Transmitted: 97.07
-aegis_brain  | [WARNING] !!! ANOMALY DETECTED !!! Value: 97.07 | Z-Score: 3.10
-\```
-</details>
 
 ![Aegis System Execution Results](./PHOTO-2026-03-12-17-06-08.jpg)
