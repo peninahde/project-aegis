@@ -1,22 +1,35 @@
 version: '3.8'
 
 services:
-  # The Math Engine service
+  # THE BRAIN
   detector:
     build:
       context: .
       dockerfile: Dockerfile.detector
     container_name: aegis_brain
     volumes:
-      # This CONNECTS your Mac's 'logs' folder to the Container's 'logs' folder
       - ./logs:/app/logs
-      # This CONNECTS your Mac's 'src' folder so you can edit code live
       - ./src:/app/src
     environment:
       - PYTHONUNBUFFERED=1
     networks:
       - aegis_net
 
+  # THE SENSOR
+  sensor:
+    build:
+      context: .
+      dockerfile: Dockerfile.sensor
+    container_name: aegis_sensor
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./src:/app/src
+    networks:
+      - aegis_net
+    depends_on:
+      - detector
+      
 networks:
   aegis_net:
     driver: bridge
