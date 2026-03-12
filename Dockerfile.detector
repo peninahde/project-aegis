@@ -1,0 +1,19 @@
+#lightweight Python 3.12 image
+FROM python:3.12-slim
+
+# set the "Home" directory inside the container
+WORKDIR /app
+
+COPY requirements.txt .
+
+# install relevant libraries
+RUN pip install --no-cache-dir -r requirements.txt
+
+# copy my code
+COPY src/ ./src/
+
+# create the logs folder inside the container
+RUN mkdir -p /app/logs
+
+# command to start the engine
+CMD ["python", "src/detector.py"]
