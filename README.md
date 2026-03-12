@@ -38,4 +38,4 @@ aegis_brain  | [WARNING] !!! ANOMALY DETECTED !!! Value: 97.07 | Z-Score: 3.10
 \```
 </details>
 
-![Aegis System Execution Results](PHOTO-2026-03-12-17-06-08.jpg)
+![Aegis System Execution Results](/Users/peninahdeichman/code/portfolio/project-aegis/PHOTO-2026-03-12-17-06-08.jpg)
